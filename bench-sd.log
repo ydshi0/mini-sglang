@@ -1,0 +1,31 @@
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+Speculative Decoding (Mini-SGLang)
+  Target: /shared_LLM_model/Qwen/Qwen3-8B
+  Draft:  /shared_LLM_model/Qwen/Qwen3-1.7B
+  K:      5
+============================================================
+[1m[2026-03-26|11:03:05|core|rank=0][0m [32mINFO    [0m Free memory before loading model: 47.13 GiB
+Loading weights:   0%|          | 0/5 [00:00<?, ?it/s]Loading weights:  20%|██        | 1/5 [00:00<00:02,  1.49it/s]Loading weights:  40%|████      | 2/5 [00:01<00:02,  1.49it/s]Loading weights:  60%|██████    | 3/5 [00:01<00:01,  1.52it/s]Loading weights:  80%|████████  | 4/5 [00:02<00:00,  2.12it/s]Loading weights: 100%|██████████| 5/5 [00:02<00:00,  2.06it/s]Loading weights: 100%|██████████| 5/5 [00:02<00:00,  1.87it/s]
+[1m[2026-03-26|11:03:08|core|rank=0][0m [32mINFO    [0m Allocating 125089 tokens for KV cache, K + V = 17.18 GiB
+[1m[2026-03-26|11:03:08|core|rank=0][0m [32mINFO    [0m Free memory after initialization: 14.14 GiB
+[1m[2026-03-26|11:03:08|core|rank=0][0m [32mINFO    [0m CUDA graph is disabled.
+[1m[2026-03-26|11:03:08|core|rank=0][0m [32mINFO    [0m Draft model: 28 layers, hidden=2048, heads=16/8
+Loading weights:   0%|          | 0/2 [00:00<?, ?it/s]Loading weights:  50%|█████     | 1/2 [00:00<00:00,  8.48it/s]Loading weights: 100%|██████████| 2/2 [00:00<00:00,  2.15it/s]Loading weights: 100%|██████████| 2/2 [00:00<00:00,  2.42it/s]
+[1m[2026-03-26|11:03:09|core|rank=0][0m [32mINFO    [0m DraftEngine ready: /shared_LLM_model/Qwen/Qwen3-1.7B, max_seq_len=300
+[1m[2026-03-26|11:03:09|core|rank=0][0m [32mINFO    [0m SpeculativeLLM ready: target=/shared_LLM_model/Qwen/Qwen3-8B, draft=/shared_LLM_model/Qwen/Qwen3-1.7B, K=5, stochastic=False
+
+--- Generating ---
+
+Output len 227 preview: '<think> Okay, let me try to figure out how much Janet makes at the farmers' market every day. So, fi'
+Output len 266 preview: '<think> Okay, let me try to figure out this problem. So, the question is: A robe takes 2 bolts of bl'
+Output len 235 preview: '<think> Okay, let me try to figure out how much profit Josh made from flipping the house. Hmm, so he'
+Output len 257 preview: '<think> Okay, let's see. James is running sprints, right? The problem says he does 3 sprints 3 times'
+Output len 181 preview: '<think> Okay, let me try to figure out how many cups of feed Wendi needs to give her chickens in the'
+Output len 236 preview: '<think> Okay, let's see. Kylar wants to buy 16 glasses. The problem says that one glass costs $5, bu'
+Output len 250 preview: '<think> Okay, let me try to figure out this problem. So, the question is about the number of sheep i'
+Output len 222 preview: '<think> Okay, let me try to figure out how long it takes Carla to download the 200 GB file. Hmm, so '
+Output len 188 preview: '<think> Okay, let me try to figure out this problem step by step. So, John drives for 3 hours at 60 '
+Output len 232 preview: '<think> Okay, let me try to figure out how much Eliza earned this week. So, the problem says she wor'
+
+--- Benchmark Results ---
+Total Output: 2294tok, Time: 42.06s, Throughput: 54.55 tok/s

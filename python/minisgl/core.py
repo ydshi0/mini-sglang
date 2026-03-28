@@ -134,3 +134,11 @@ def set_global_ctx(ctx: Context):
 def get_global_ctx() -> Context:
     assert _GLOBAL_CTX is not None, "Global context is not set"
     return _GLOBAL_CTX
+
+
+def swap_global_ctx(new_ctx: Context) -> Context:
+    """Swap the global context and return the old one. Used by speculative decoding."""
+    global _GLOBAL_CTX
+    old_ctx = _GLOBAL_CTX
+    _GLOBAL_CTX = new_ctx
+    return old_ctx  # type: ignore
